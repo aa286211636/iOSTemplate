@@ -1,0 +1,126 @@
+//
+//  PrefixHeader.pch
+//  DFWTProject
+//
+//  Created by Administrator on 2022/8/22.
+//  Copyright © 2022 Administrator. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+  #import "AppDelegate.h"
+  #import <MBProgressHUD+Add/UIView+MBPHUD.h>
+  #import <MBProgressHUD+Add/UIViewController+MBPHUD.h>
+  #import <CYLTabBarController/CYLTabBarController.h>
+  #import <IQKeyboardManager/IQKeyboardManager.h>
+  #import <LEEAlert/LEEAlert.h>
+  #import <Masonry/Masonry.h>
+  #import <SDWebImage/UIImageView+WebCache.h>
+  #import <TZImagePickerController/TZImagePickerController.h>
+  #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+  #import <MJRefresh/MJRefresh.h>
+  #import "APIDefine.h"
+  #import "BaseNavigationController.h"
+  #import "BaseRequestModel.h"
+  #import "UIView+Gesture.h"
+  #import "UIButton+CountDone.h"
+  #import "UITextField+MaxLength.h"
+  #import "NSString+Addition.h"
+  #import "UIImageView+Letters.h"
+  #import "UIView+Effects.h"
+  #import "UIImage+ImgColor.h"
+
+
+
+  //获取xib资源
+  #define DEF_GetNib(NibName) [[NSBundle mainBundle] loadNibNamed:[NSString stringWithFormat:@"%@",NibName] owner:nil options:nil].lastObject
+
+  //屏幕宽高
+  #define DEF_NavBarH (DEF_SCREENH_HEIGHT >= 812.0 ? 88 : 64)
+  #define DEF_TabBarH (DEF_SCREENH_HEIGHT >= 812.0 ? 83 : 49)
+  #define DEF_StateBarH (DEF_SCREENH_HEIGHT >= 812.0 ? 44 : 20)
+  #define DEF_SafeBotoomH (DEF_SCREENH_HEIGHT >= 812.0 ? 34 : 0)
+
+  #define DEF_SCREEN_WIDTH ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
+  #define DEF_SCREENH_HEIGHT ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
+  #define DEF_SCREEN_SIZE ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)
+
+  //NSUserdefault存取
+  #define DEF_SaveUserDefault(obj, key) [[NSUserDefaults standardUserDefaults] setValue:obj forKey:key]
+  #define DEF_GetUserDefault(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+  #define DEF_SaveIntegerUserDefault(integer, key) [[NSUserDefaults standardUserDefaults] setInteger:integer forKey:key]
+  #define DEF_GetIntegerUserDefault(key) [[NSUserDefaults standardUserDefaults] integerForKey:key]
+  #define DEF_SaveBoolUserDefault(boolValue, key)  [[NSUserDefaults standardUserDefaults]setBool:boolValue forKey:key]
+  #define DEF_GetBoolUserDefault(key) [[NSUserDefaults standardUserDefaults] boolForKey:key]
+  #define DEF_RemoveUserDefault(key) [[NSUserDefaults standardUserDefaults]removeObjectForKey:key];
+
+  //设置RGB颜色/设置RGBA颜色
+  #define DEF_RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+  #define DEF_RGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+  #define DEF_HEXColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+  #define DEF_HEXAColor(rgbValue, a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
+/**
+    * 随机色
+    * 注意下面是(256),(0 ~ 255)一共256种颜色
+    * 如果写成(255)就失去了(r:255, g:255, b:255)这个最纯洁的白色
+    */
+   #define DEF_RandomColor  [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1] 
+
+  //主色调
+  #define DEF_APPCOLOR DEF_RGBColor(0, 119, 255)
+  //导航条颜色
+  #define DEF_NAVCOLOR DEF_RGBColor(255, 255, 255)
+  //导航按钮颜色
+  #define DEF_NAVITEMCOLOR DEF_RGBColor(0, 0, 0)
+  //背景色
+  #define DEF_BACKCOLOR DEF_RGBColor(255, 255, 255)
+  //字体颜色(灰色)
+  #define DEF_FONT_GRAY_COLOR DEF_RGBColor(144, 144, 144)
+  //分割线色
+  #define DEF_SEPERATECOLOR DEF_RGBColor(219, 219, 219)
+  //列表背景色
+  #define DEF_TABLEBGCOLOR DEF_RGBColor(244, 245, 245)
+
+  // 防止多次调用
+  #define DEFRepeatClickTime(_seconds_) \
+  static BOOL shouldPrevent; \
+  if (shouldPrevent) return; \
+  shouldPrevent = YES; \
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((_seconds_) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ \
+  shouldPrevent = NO; \
+  }); \
+
+  //自定义高效率的 NSLog
+  #ifdef DEBUG
+  #define DEF_Log(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+  #else
+  #define DEF_Log(...)
+  #endif
+
+  //强弱引用
+  #define DEF_WeakSelf(obj) __weak typeof(obj) weakSelf = obj;
+  #define DEF_StrongSelf(obj) __strong typeof(obj) strongSelf = weakSelf;
+
+
+  //获取系统版本
+  #define DEF_IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+  //ipad  iphone
+  #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+  #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
+
+  //判断是真机还是模拟器
+  #if TARGET_OS_IPHONE
+  //iPhone Device
+  #endif
+  #if TARGET_IPHONE_SIMULATOR
+  //iPhone Simulator
+  #endif
+#endif
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DFWT_PhoneCell">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="74"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIX-RK-zif">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="74"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bIX-RK-zif" secondAttribute="bottom" id="Cb6-jb-i3b"/>
+                <constraint firstItem="bIX-RK-zif" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="M7s-D0-5JP"/>
+                <constraint firstItem="bIX-RK-zif" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TFU-2F-gt9"/>
+                <constraint firstAttribute="trailing" secondItem="bIX-RK-zif" secondAttribute="trailing" id="nfx-1I-8kH"/>
+            </constraints>
+            <size key="customSize" width="75" height="74"/>
+            <connections>
+                <outlet property="phoneBtn" destination="bIX-RK-zif" id="C0O-RN-4al"/>
+            </connections>
+            <point key="canvasLocation" x="150" y="86.383928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

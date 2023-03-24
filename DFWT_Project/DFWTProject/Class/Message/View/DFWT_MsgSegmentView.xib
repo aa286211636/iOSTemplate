@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DFWT_MsgSegmentView">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQo-yk-mqI">
+                    <rect key="frame" x="246.5" y="0.0" width="123.5" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="新消息" image="msg_news">
+                        <color key="titleColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39N-3q-qgO">
+                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="日历" image="msg_rili">
+                        <color key="titleColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V81-oD-4q2">
+                    <rect key="frame" x="123.5" y="0.0" width="123" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="待办" image="msg_daiban">
+                        <color key="titleColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-po-aaj">
+                    <rect key="frame" x="122.5" y="15.5" width="1" height="15"/>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="0Gj-fF-7t8"/>
+                        <constraint firstAttribute="width" constant="1" id="d7Y-dT-atY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raL-BD-Oeg">
+                    <rect key="frame" x="245.5" y="15.5" width="1" height="15"/>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="7Qu-O1-aqP"/>
+                        <constraint firstAttribute="width" constant="1" id="Ryy-Of-jf6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kQo-yk-mqI" secondAttribute="bottom" id="0D7-Jh-LtR"/>
+                <constraint firstItem="V81-oD-4q2" firstAttribute="width" secondItem="39N-3q-qgO" secondAttribute="width" id="29v-t1-eeu"/>
+                <constraint firstItem="kQo-yk-mqI" firstAttribute="leading" secondItem="V81-oD-4q2" secondAttribute="trailing" id="7yM-85-wpx"/>
+                <constraint firstItem="kQo-yk-mqI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="D0h-KL-Fdr"/>
+                <constraint firstItem="39N-3q-qgO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QCN-6Y-p6F"/>
+                <constraint firstAttribute="trailing" secondItem="kQo-yk-mqI" secondAttribute="trailing" id="UBp-NF-zmi"/>
+                <constraint firstAttribute="bottom" secondItem="V81-oD-4q2" secondAttribute="bottom" id="Uig-aJ-tNc"/>
+                <constraint firstItem="kQo-yk-mqI" firstAttribute="leading" secondItem="raL-BD-Oeg" secondAttribute="trailing" id="XEx-M6-RTY"/>
+                <constraint firstItem="V81-oD-4q2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bTR-dc-c7a"/>
+                <constraint firstItem="DCs-po-aaj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="beG-Aa-Obz"/>
+                <constraint firstItem="V81-oD-4q2" firstAttribute="leading" secondItem="DCs-po-aaj" secondAttribute="trailing" id="dkq-vE-HnA"/>
+                <constraint firstItem="V81-oD-4q2" firstAttribute="leading" secondItem="39N-3q-qgO" secondAttribute="trailing" id="g8d-Sh-bvz"/>
+                <constraint firstAttribute="bottom" secondItem="39N-3q-qgO" secondAttribute="bottom" id="hUi-iW-1fC"/>
+                <constraint firstItem="39N-3q-qgO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k8r-i0-PND"/>
+                <constraint firstItem="kQo-yk-mqI" firstAttribute="width" secondItem="39N-3q-qgO" secondAttribute="width" id="ubG-pE-mEY"/>
+                <constraint firstItem="raL-BD-Oeg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ydH-ag-z46"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="165.21739130434784" y="-21.428571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="msg_daiban" width="13.5" height="13"/>
+        <image name="msg_news" width="9.5" height="14"/>
+        <image name="msg_rili" width="13.5" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

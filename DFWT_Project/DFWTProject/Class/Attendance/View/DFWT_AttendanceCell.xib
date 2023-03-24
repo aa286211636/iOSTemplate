@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="DFWT_AttendanceCell">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-Rd-Dhu">
+                        <rect key="frame" x="20" y="3" width="10" height="10"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Ub9-bQ-hYH"/>
+                            <constraint firstAttribute="height" constant="10" id="uy3-4D-L5f"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVA-1f-0nO">
+                        <rect key="frame" x="24.5" y="13" width="1" height="157"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="QUb-jo-qZb"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上班打卡 07:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ap-VD-XQs">
+                        <rect key="frame" x="45" y="0.0" width="105" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打卡时间  08:47" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-6t-qHC">
+                        <rect key="frame" x="45" y="28" width="124.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work_3_1" translatesAutoresizingMaskIntoConstraints="NO" id="Ews-uJ-nGJ">
+                        <rect key="frame" x="50.5" y="64" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="EzU-Rm-NnL"/>
+                            <constraint firstAttribute="height" constant="15" id="WU2-P0-cyz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宣武门西大街国资委" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSc-8a-o7y">
+                        <rect key="frame" x="70.5" y="63.5" width="120" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YgR-Rd-Dhu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Aho-rk-lCs"/>
+                    <constraint firstItem="2ap-VD-XQs" firstAttribute="leading" secondItem="YgR-Rd-Dhu" secondAttribute="trailing" constant="15" id="AmA-1N-WKt"/>
+                    <constraint firstItem="YgR-Rd-Dhu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BIH-Vu-SrJ"/>
+                    <constraint firstItem="FVA-1f-0nO" firstAttribute="centerX" secondItem="YgR-Rd-Dhu" secondAttribute="centerX" id="DZ5-AQ-e2v"/>
+                    <constraint firstItem="TKZ-6t-qHC" firstAttribute="top" secondItem="2ap-VD-XQs" secondAttribute="bottom" constant="10" id="Heg-oa-8Wc"/>
+                    <constraint firstItem="TKZ-6t-qHC" firstAttribute="leading" secondItem="2ap-VD-XQs" secondAttribute="leading" id="Iff-Vw-4DB"/>
+                    <constraint firstItem="FVA-1f-0nO" firstAttribute="top" secondItem="YgR-Rd-Dhu" secondAttribute="bottom" id="Njp-33-C3j"/>
+                    <constraint firstItem="2ap-VD-XQs" firstAttribute="top" secondItem="YgR-Rd-Dhu" secondAttribute="top" constant="-3" id="f5n-Yk-3pr"/>
+                    <constraint firstItem="RSc-8a-o7y" firstAttribute="leading" secondItem="Ews-uJ-nGJ" secondAttribute="trailing" constant="5" id="gVr-oZ-FNc"/>
+                    <constraint firstItem="Ews-uJ-nGJ" firstAttribute="top" secondItem="TKZ-6t-qHC" secondAttribute="bottom" constant="15" id="gds-ac-T58"/>
+                    <constraint firstItem="Ews-uJ-nGJ" firstAttribute="leading" secondItem="FVA-1f-0nO" secondAttribute="trailing" constant="25" id="hbv-UE-IOu"/>
+                    <constraint firstItem="RSc-8a-o7y" firstAttribute="centerY" secondItem="Ews-uJ-nGJ" secondAttribute="centerY" id="lr2-Ok-BPM"/>
+                    <constraint firstAttribute="bottom" secondItem="FVA-1f-0nO" secondAttribute="bottom" id="smE-33-kav"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressImg" destination="Ews-uJ-nGJ" id="c0P-sP-6bW"/>
+                <outlet property="addressLb" destination="RSc-8a-o7y" id="6dh-T3-JNO"/>
+                <outlet property="attenceTimeLb" destination="TKZ-6t-qHC" id="NGx-SV-QtM"/>
+                <outlet property="circleView" destination="YgR-Rd-Dhu" id="Pkc-FO-BHO"/>
+                <outlet property="lineView" destination="FVA-1f-0nO" id="WCE-3F-qAb"/>
+                <outlet property="onTimeLb" destination="2ap-VD-XQs" id="TGR-3Z-WNw"/>
+            </connections>
+            <point key="canvasLocation" x="313.768115942029" y="124.21875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="work_3_1" width="37.5" height="40"/>
+    </resources>
+</document>

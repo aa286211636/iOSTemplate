@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DFWT_AttendanceFooter">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="att_daka_btn" translatesAutoresizingMaskIntoConstraints="NO" id="OJt-Cl-gh8">
+                    <rect key="frame" x="109.5" y="0.0" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="gjL-Sw-4g6"/>
+                        <constraint firstAttribute="height" constant="240" id="lTb-YE-VV2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:04:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Rh-02H">
+                    <rect key="frame" x="178.5" y="116" width="102" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="z0H-nZ-pwF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下班打卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6s-UU-h01">
+                    <rect key="frame" x="194.5" y="80" width="70" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="820-w3-BvR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经入考勤范围：北京市石景山区京源路3号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HQ-fK-Ddp">
+                    <rect key="frame" x="89.5" y="222" width="280" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEr-aj-6Dk">
+                    <rect key="frame" x="188.5" y="250" width="82" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="重新定位"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AEr-aj-6Dk" firstAttribute="top" secondItem="OJt-Cl-gh8" secondAttribute="bottom" constant="10" id="6CW-aQ-5NB"/>
+                <constraint firstItem="0qK-Rh-02H" firstAttribute="top" secondItem="o6s-UU-h01" secondAttribute="bottom" constant="15" id="BxJ-Wz-A5n"/>
+                <constraint firstItem="9HQ-fK-Ddp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EOm-xf-QjP"/>
+                <constraint firstItem="0qK-Rh-02H" firstAttribute="centerX" secondItem="OJt-Cl-gh8" secondAttribute="centerX" id="MtA-5f-imz"/>
+                <constraint firstItem="OJt-Cl-gh8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NLh-V7-g9M"/>
+                <constraint firstItem="9HQ-fK-Ddp" firstAttribute="top" secondItem="0qK-Rh-02H" secondAttribute="bottom" constant="70" id="NrE-h0-NWU"/>
+                <constraint firstItem="o6s-UU-h01" firstAttribute="centerX" secondItem="OJt-Cl-gh8" secondAttribute="centerX" id="U16-tw-7Vq"/>
+                <constraint firstItem="o6s-UU-h01" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="WD5-vD-vfe"/>
+                <constraint firstItem="AEr-aj-6Dk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WFF-qf-Qo2"/>
+                <constraint firstItem="OJt-Cl-gh8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pxh-Si-17L"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLb" destination="9HQ-fK-Ddp" id="8JA-Ek-BPW"/>
+                <outlet property="dakaLb" destination="o6s-UU-h01" id="EaM-3w-L7t"/>
+                <outlet property="timeLb" destination="0qK-Rh-02H" id="pK7-js-xDU"/>
+            </connections>
+            <point key="canvasLocation" x="271.73913043478262" y="-30.46875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="att_daka_btn" width="220" height="220"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

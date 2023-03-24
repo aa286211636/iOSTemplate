@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="DFWT_MsgCell">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即时消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-rV-gJR">
+                        <rect key="frame" x="79" y="12" width="65.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="考勤小助手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5K-TW-2xo">
+                        <rect key="frame" x="79" y="39" width="76.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-S1-Y7F">
+                        <rect key="frame" x="315" y="14" width="27" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc_zhishiku" translatesAutoresizingMaskIntoConstraints="NO" id="2so-CB-ikT">
+                        <rect key="frame" x="20" y="10" width="49" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2so-CB-ikT" secondAttribute="height" multiplier="1:1" id="IXm-pM-lWt"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2so-CB-ikT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4bd-I4-C6e"/>
+                    <constraint firstItem="9bp-rV-gJR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5Xa-Ml-7U3"/>
+                    <constraint firstAttribute="trailing" secondItem="ZjK-S1-Y7F" secondAttribute="trailing" constant="20" id="RrN-hi-eLh"/>
+                    <constraint firstAttribute="bottom" secondItem="H5K-TW-2xo" secondAttribute="bottom" constant="12" id="WY0-L5-GHa"/>
+                    <constraint firstItem="2so-CB-ikT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Zke-9J-byA"/>
+                    <constraint firstItem="2so-CB-ikT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mJ5-CP-Voc"/>
+                    <constraint firstItem="ZjK-S1-Y7F" firstAttribute="centerY" secondItem="9bp-rV-gJR" secondAttribute="centerY" id="mpx-58-ev4"/>
+                    <constraint firstItem="9bp-rV-gJR" firstAttribute="leading" secondItem="2so-CB-ikT" secondAttribute="trailing" constant="10" id="ohR-kT-Ddv"/>
+                    <constraint firstItem="H5K-TW-2xo" firstAttribute="leading" secondItem="9bp-rV-gJR" secondAttribute="leading" id="p4o-Fi-PPb"/>
+                    <constraint firstAttribute="bottom" secondItem="2so-CB-ikT" secondAttribute="bottom" constant="10" id="xkJ-Uh-Kik"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="60.869565217391312" y="103.45982142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="doc_zhishiku" width="45.5" height="46.5"/>
+    </resources>
+</document>

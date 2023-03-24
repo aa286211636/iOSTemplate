@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="KGk-i7-Jjw" customClass="DFWT_MeetingTFCell">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-QV-Yv4">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sgj-gZ-ORc">
+                                <rect key="frame" x="0.0" y="10" width="327" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K6-A5-Cd7">
+                                <rect key="frame" x="0.0" y="53" width="327" height="1"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="G4Y-n5-LXy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sgj-gZ-ORc" firstAttribute="leading" secondItem="Faf-QV-Yv4" secondAttribute="leading" id="YuY-sm-aUW"/>
+                            <constraint firstItem="sgj-gZ-ORc" firstAttribute="top" secondItem="Faf-QV-Yv4" secondAttribute="top" constant="10" id="ZPV-B6-74S"/>
+                            <constraint firstAttribute="bottom" secondItem="sgj-gZ-ORc" secondAttribute="bottom" constant="10" id="fGn-ik-08c"/>
+                            <constraint firstAttribute="bottom" secondItem="1K6-A5-Cd7" secondAttribute="bottom" id="fJ3-Dj-yoY"/>
+                            <constraint firstAttribute="trailing" secondItem="sgj-gZ-ORc" secondAttribute="trailing" id="kFd-TN-orV"/>
+                            <constraint firstItem="1K6-A5-Cd7" firstAttribute="leading" secondItem="Faf-QV-Yv4" secondAttribute="leading" id="od6-yz-XGi"/>
+                            <constraint firstAttribute="trailing" secondItem="1K6-A5-Cd7" secondAttribute="trailing" id="wG7-D8-lj7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Faf-QV-Yv4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0lg-hl-KCI"/>
+                    <constraint firstItem="Faf-QV-Yv4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6CJ-KS-wmx"/>
+                    <constraint firstAttribute="trailing" secondItem="Faf-QV-Yv4" secondAttribute="trailing" id="PdL-hy-EWJ"/>
+                    <constraint firstAttribute="bottom" secondItem="Faf-QV-Yv4" secondAttribute="bottom" id="bUq-16-1Qo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="intputTF" destination="sgj-gZ-ORc" id="ZfJ-kY-Ht5"/>
+                <outlet property="leadingConstraint" destination="YuY-sm-aUW" id="32v-Nf-6m6"/>
+                <outlet property="trailingConstraint" destination="kFd-TN-orV" id="HfD-76-xaR"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="137.27678571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
